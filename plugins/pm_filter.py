@@ -119,8 +119,8 @@ async def pmxt(bot, message):
     if content.startswith("/") or content.startswith("#"): return  # ignore commands and hashtags
     if user_id in ADMINS: return # ignore admins
     await message.reply_text(
-         text="<b>ʜᴇʏ ᴅᴜᴅᴇ 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ᴏɴ ᴏᴜʀ <a href=https://t.me/CIINEMA_TERTIARY_org>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ👇</b>",   
-         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/CIINEMA_TERTIARY_org")]]))    
+         text="<b>ʜᴇʏ ᴅᴜᴅᴇ 😍 ,\n\nʏᴏᴜ ᴄᴀɴ'ᴛ ɢᴇᴛ ᴍᴏᴠɪᴇs ꜰʀᴏᴍ ʜᴇʀᴇ. ʀᴇǫᴜᴇsᴛ ᴏɴ ᴏᴜʀ <a href=https://t.me/textgolinlk>ᴍᴏᴠɪᴇ ɢʀᴏᴜᴘ</a> ᴏʀ ᴄʟɪᴄᴋ ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ👇</b>",   
+         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("📝 ʀᴇǫᴜᴇsᴛ ʜᴇʀᴇ ", url=f"https://t.me/textgolinlk")]]))    
 
 
 @Client.on_callback_query(filters.regex(r"^next"))
@@ -687,8 +687,9 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InlineKeyboardButton('• Hᴇʟᴘ •', callback_data='help'),
             InlineKeyboardButton('• Aʙᴏᴜᴛ •', callback_data='about')
             ],[
-            InlineKeyboardButton('🔔 ꜱᴜʙꜱᴄʀɪʙᴇ', url='https://youtube.com/@mrzbots?si=dVQG3o-SM6cUIVXf')
-        ]]
+            InlineKeyboardButton('🚀 𝚜𝚞𝚋', url='https://youtube.com/@mrzbots?si=dVQG3o-SM6cUIVXf'),
+            InlineKeyboardButton('join 👇', url='https://youtube.com/@mrzbots?si=dVQG3o-SM6cUIVXf')
+           ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
